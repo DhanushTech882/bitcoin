@@ -30,6 +30,7 @@ Statsmodels
 Prophet
 
 📂 Project Structure
+
 bitcoin/
 │── data/                  # Historical Bitcoin datasets
 │── models/                # Saved trained models
