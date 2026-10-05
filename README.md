@@ -127,8 +127,34 @@ Once started, open your browser and navigate to:
 
 ---
 
+## ☁️ Cloud Deployment
+
+### 1. Streamlit Community Cloud (Recommended & Free)
+Streamlit Cloud natively hosts the full interactive dashboard and LSTM neural network inference:
+1. Go to [share.streamlit.io](https://share.streamlit.io/) and log in with GitHub.
+2. Click **New app**.
+3. Select Repository: `DhanushTech882/bitcoin`, Branch: `main`, Main file path: `app.py`.
+4. Click **Deploy!**
+
+### 2. Vercel Web Portal
+This repository includes a static web portal and market ticker configured for Vercel:
+- Automatically deployed using `.vercelignore` and `vercel.json` without Serverless Function conflicts.
+
+### 3. Docker Container
+Build and run anywhere with Docker:
+```bash
+docker build -t coinsight .
+docker run -p 8501:8501 coinsight
+```
+
+### 4. Render
+Connect this repository to [render.com](https://render.com) as a Web Service. The included `render.yaml` sets up the build and start commands automatically.
+
+---
+
 ## 👨‍💻 Author
 
 **Dhanush Tech**
 - GitHub: [@DhanushTech882](https://github.com/DhanushTech882)
 - Repository: [https://github.com/DhanushTech882/bitcoin](https://github.com/DhanushTech882/bitcoin)
+
