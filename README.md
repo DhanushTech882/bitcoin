@@ -137,8 +137,13 @@ Streamlit Cloud natively hosts the full interactive dashboard and LSTM neural ne
 4. Click **Deploy!**
 
 ### 2. Vercel Web Portal
-This repository includes a static web portal and market ticker configured for Vercel:
-- Automatically deployed using `.vercelignore` and `vercel.json` without Serverless Function conflicts.
+This repository includes a static, zero-build web portal and real-time market terminal configured specifically for Vercel:
+- **`vercel.json`** explicitly sets `"framework": null` and `"buildCommand": null`, ensuring Vercel serves the static dashboard (`index.html`) directly without triggering Python serverless runtime or `pip install` size limit errors.
+- **`.vercelignore`** excludes large ML binaries (`.keras`), virtual environments, and heavy Python dependencies from the Vercel deployment payload.
+- **Instant Deployment**:
+  1. Go to [vercel.com/new](https://vercel.com/new) and import `DhanushTech882/bitcoin`.
+  2. Leave Framework Preset as **Other** (detected automatically from `vercel.json`).
+  3. Click **Deploy** &rarr; Live in under 15 seconds!
 
 ### 3. Docker Container
 Build and run anywhere with Docker:

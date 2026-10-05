@@ -1,5 +1,5 @@
 # Vercel Ignore Configuration
-# Exclude Streamlit app and ML backend files from Vercel's serverless runtime
+# Exclude Streamlit app, ML backend, virtual environment, and large assets from Vercel deployment
 app.py
 train_model.py
 components/
@@ -10,4 +10,9 @@ requirements.txt
 venv/
 .streamlit/
 .git/
+.gitignore
 .vscode/
+Dockerfile
+render.yaml
+*.pyc
+__pycache__/
